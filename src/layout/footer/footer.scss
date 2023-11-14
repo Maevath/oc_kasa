@@ -1,0 +1,23 @@
+.footer {
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    justify-content: end;
+    background-color: black;
+    color: #f6f6f6;
+    padding: 4rem 0;
+    text-align: center;
+    font-size: 0.7rem;
+
+    p {
+        margin-inline: 7rem;
+    }
+
+    .logo {
+        width: 7rem;
+
+        path {
+            fill: #f6f6f6;
+        }
+    }
+}

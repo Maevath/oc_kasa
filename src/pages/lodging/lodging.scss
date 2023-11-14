@@ -1,0 +1,108 @@
+.page {
+    background: white;
+
+    .footer {
+        height: 15vh;
+    }
+}
+
+.location {
+    color: $primary;
+    margin: 1rem;
+}
+
+.lodging {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .titleLocation {
+        font-weight: 600;
+    }
+
+    .tags {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .tag {
+            background: $primary;
+            font-size: 0.7rem;
+            color: white;
+            text-align: center;
+            padding: 0.2rem 0.9rem;
+
+            border-radius: 6px;
+        }
+    }
+
+}
+
+.hote-profil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .hote {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .hote-name {
+            width: 4rem;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 20px;
+            text-align: right;
+            color: var(--primary);
+            direction: rtl;
+        }
+
+        .hote-img {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+
+    .rating {
+        display: flex;
+        gap: 0.5rem;
+
+        .star-rating {
+            // Styles par défaut pour les étoiles
+            fill: red; // Couleur grise par défaut
+        }
+    }
+
+
+}
+
+.star-rating {
+    // Styles par défaut pour les étoiles
+    fill: #CCCCCC; // Couleur grise par défaut
+}
+
+.star-rating.primary {
+    fill: $primary; // Couleur primaire pour les étoiles primaires
+}
+
+@media (min-width: 1024px) {
+    .page {
+        padding: 0 13vh 3rem;
+    }
+
+    .dropdown-lodging {
+        display: flex;
+        max-width: 100%;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    .page {
+        padding: 0 20vh 3rem;
+    }
+}

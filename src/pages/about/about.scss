@@ -1,0 +1,19 @@
+.about {
+
+    background: white;
+    padding: 0 1vh 3vh;
+}
+
+@media (min-width: 1024px) {
+    .about {
+
+        padding: 0 13vh 3vh;
+
+        .dropdown {
+            padding: 0 7vh;
+        }
+    }
+
+
+
+}

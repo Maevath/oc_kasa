@@ -1,0 +1,30 @@
+.error {
+    background: white;
+
+    .error404 {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        margin: 2rem;
+        gap: 4rem;
+        color: $primary;
+        font-weight: 500;
+
+        a {
+            text-decoration: underline;
+        }
+
+        .logo404 {
+            width: 10rem;
+            height: auto;
+        }
+    }
+
+    .footer {
+        height: 50vh;
+    }
+}

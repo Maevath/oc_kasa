@@ -1,0 +1,12 @@
+.home {
+    background: white;
+    padding: 0 1rem 1rem;
+}
+
+
+@media (min-width: 1024px) {
+    .home {
+        padding: 0 13vh;
+    }
+
+}
