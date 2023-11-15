@@ -1,7 +1,8 @@
 .dropdowns {
     display: block;
     width: 100%;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
+
 }
 
 .dropdown-header {
@@ -12,7 +13,7 @@
     height: 20px;
     border-radius: 0.5rem;
     padding: 0.6rem;
-    margin: 1.2rem 1rem 0;
+    margin: 0 1rem 0;
     background-color: $primary;
     cursor: pointer;
     color: white;

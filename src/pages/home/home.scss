@@ -1,6 +1,6 @@
 .home {
     background: white;
-    padding: 0 1rem 1rem;
+    padding: 0 0 1rem;
 }
 
 
@@ -9,4 +9,11 @@
         padding: 0 13vh;
     }
 
+}
+
+@media (min-width: 1440px) {
+    .home {
+        padding: 0rem 21vh;
+
+    }
 }
