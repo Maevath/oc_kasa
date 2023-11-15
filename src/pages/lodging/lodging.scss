@@ -22,17 +22,22 @@
     }
 
     .tags {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        justify-content: start;
         gap: 1rem;
-        margin-bottom: 1rem;
+        margin: 1rem 0;
+
 
         .tag {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             background: $primary;
             font-size: 0.7rem;
             color: white;
             text-align: center;
             padding: 0.2rem 0.9rem;
-
             border-radius: 6px;
         }
     }
