@@ -1,5 +1,9 @@
-# P11 Kasa - Créez une application web avec React
-### Formation Intégrateur web - openclassrooms
+## Kasa
+Projet 11 - Créez une application web avec React
+Formation Intégrateur web  - openclassrooms
+
+
+
 
 ## Missions
 Développer l'application de Kasa en utilisant la bibliothèque React et en exploitant les fonctionnalités avancées de mise en page et de style grâce à Sass, tout en veillant à une intégration fidèle à la maquette Figma;
