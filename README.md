@@ -1,10 +1,9 @@
-## <img src="./public/logo.png" alt="Logo" width="100">
+## <img src="./logo.png" alt="Logo" width="100">
 
 ### Missions
+
 Développer l'application de Kasa en utilisant la bibliothèque React et en exploitant les fonctionnalités avancées de mise en page et de style grâce à Sass, tout en veillant à une intégration fidèle à la maquette Figma;
-<br>
-<br>
-<br>
+<br><br>
 
 ### Technos
 <p>
@@ -30,3 +29,9 @@ Développer l'application de Kasa en utilisant la bibliothèque React et en expl
     </a>
   </li>                                  
 </ul>
+<br><br>
+
+<p align="center">
+  <img src="./Design sans titre.gif" width="600" alt="Description de l'image" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <h4 align="center">Application Kasa</h4>
+</p>
