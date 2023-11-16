@@ -14,18 +14,15 @@ const Lodging = () => {
     const [dataLodging, setDataLodging] = useState([]);
 
     useEffect(() => {
-        // Faites une requête pour charger le fichier JSON du logement à partir de son URL dans le répertoire "public"
         axios
             .get('/dataLodging.json')
             .then((response) => {
-                // Une fois les données du logement chargées, recherchez l'élément avec l'ID correspondant
                 const data = response.data;
                 const lodging = data.find(item => item.id === id);
                 setLodgingData(lodging);
             })
             .catch((error) => console.error("Erreur lors de la requête du logement :", error));
 
-        // Faites une requête pour charger le fichier JSON de dataLodging
         axios
             .get('/dataLodging.json')
             .then((response) => {

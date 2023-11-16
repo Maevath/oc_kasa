@@ -19,16 +19,6 @@
     color: white;
     position: relative;
     z-index: 2;
-
-    .arrow {
-        width: 1.6rem;
-        transform: rotate(270deg);
-    }
-
-    .flipped {
-        transform: rotate(90deg);
-        margin: 0 6px 0 0;
-    }
 }
 
 .equipments {
@@ -42,9 +32,12 @@
 .dropdown {
     overflow: hidden;
     transition: height 0.3s ease-out;
+
 }
 
 .dropdown-text {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    overflow: hidden;
     margin: 0 1rem;
     padding: 2rem 1rem 1rem;
     background-color: $secondary;
