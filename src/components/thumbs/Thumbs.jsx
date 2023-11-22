@@ -31,3 +31,8 @@ const Thumbs = () => {
 };
 
 export default Thumbs;
+
+
+
+
+

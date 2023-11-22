@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Error from '../error/Error'
-import Header from '../../layout/header/Header';
-import Footer from '../../layout/footer/Footer';
+import Layout from '../../layout/Layout';
 import Carousel from '../../components/carousel/Carousel';
 import Dropdown from '../../components/dropdwon/Dropdown';
 import Star from '../../components/svg/Star'
+
 
 const Lodging = () => {
     const { id } = useParams();
@@ -31,78 +31,72 @@ const Lodging = () => {
             })
             .catch((error) => console.error("Erreur lors de la requête de dataLodging :", error));
     }, [id]);
+
     if (!lodgingData) {
         return (
             <Error />
         )
     }
+
+    const lodgingInfo = dataLodging.find(item => item.id === id);
+    const dropdownContents = [
+        { title: 'Description', content: lodgingInfo.description },
+        { title: 'Équipements', content: lodgingInfo.equipments }
+    ];
+
     return (
         <div>
-            <Header />
-            <div className='page'>
-                <Carousel />
-
-                {lodgingData ? (
-                    <div className='location'>
-                        <div className='lodging'>
-                            <h2 className='titleLocation'>{lodgingData.title}</h2>
-                            <h3>{lodgingData.location}</h3>
-                            <div className='tags'>
-                                {lodgingData.tags.map((tag, index) => (
-                                    <span key={index} className='tag' title={tag}>
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                        <div className='hote-profil'>
-                            <div className='rating'>
-                                <div className='rating'>
-                                    {[...Array(5)].map((_, index) => (
-                                        <Star
-                                            key={index}
-                                            color={index < lodgingData.rating ? '#FF6060' : '#CCCCCC'}
-                                        />
+            <Layout>
+                <div className='page'>
+                    <Carousel />
+                    {lodgingData ? (
+                        <div className='location'>
+                            <div className='lodging'>
+                                <h2 className='titleLocation'>{lodgingData.title}</h2>
+                                <h3>{lodgingData.location}</h3>
+                                <div className='tags'>
+                                    {lodgingData.tags.map((tag, index) => (
+                                        <span key={index} className='tag' title={tag}>
+                                            {tag}
+                                        </span>
                                     ))}
                                 </div>
                             </div>
-                            <div className='hote'>
-                                <p className='hote-name'>{lodgingData.host.name}</p>
-                                <img className='hote-img' src={lodgingData.host.picture} alt={lodgingData.host.name} />
+                            <div className='hote-profil'>
+                                <div className='rating'>
+                                    <div className='rating'>
+                                        {[...Array(5)].map((_, index) => (
+                                            <Star
+                                                key={index}
+                                                color={index < lodgingData.rating ? '#FF6060' : '#CCCCCC'}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className='hote'>
+                                    <p className='hote-name'>{lodgingData.host.name}</p>
+                                    <img className='hote-img' src={lodgingData.host.picture} alt={lodgingData.host.name} />
+                                </div>
                             </div>
+
                         </div>
+                    ) : (
+                        <div>Loading...</div>
+                    )}
 
+                    <div className='dropdown-lodging'>
+                        {/* Utilisez les informations pour rendre les composants Dropdown */}
+                        {dropdownContents.map((item, index) => (
+                            <Dropdown
+                                key={index}
+                                title={item.title}
+                                content={item.content}
+                                className="dropdown"
+                            />
+                        ))}
                     </div>
-                ) : (
-                    <div>Loading...</div>
-                )}
-
-                <div className='dropdown-lodging'>
-                    {dataLodging
-                        .filter(item => item.id === id)
-                        .map((item, index) => (
-                            <Dropdown
-                                key={index}
-                                title="Description"
-                                description={item.description}
-                            />
-                        ))
-                    }
-
-                    {dataLodging
-                        .filter(item => item.id === id)
-                        .map((item, index) => (
-                            <Dropdown
-                                key={index}
-                                title="Équipements"
-                                equipments={item.equipments}
-
-                            />
-                        ))
-                    }
                 </div>
-            </div>
-            <Footer copyright="© 2020 Kasa. All&nbsp;rights&nbsp;reserved" />
+            </Layout>
         </div>
     );
 };

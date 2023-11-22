@@ -13,3 +13,7 @@ const Banner = ({ titre, bannerImg }) => {
 };
 
 export default Banner;
+
+
+
+

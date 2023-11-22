@@ -11,3 +11,7 @@ const Footer = ({ copyright }) => {
 };
 
 export default Footer;
+
+
+
+

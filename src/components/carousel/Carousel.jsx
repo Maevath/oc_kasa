@@ -36,7 +36,12 @@ const Carousel = () => {
         <div className="carousel">
             <div className='carousel-inner'>
                 {lodgingData && (
-                    <img src={lodgingData.pictures[currentImageIndex]} alt={`Vue de ${lodgingData.title} - ${currentImageIndex + 1}`} />
+                    <>
+                        <img src={lodgingData.pictures[currentImageIndex]} alt={`Vue de ${lodgingData.title} - ${currentImageIndex + 1}`} />
+                        <div className='image-counter'>
+                            {`${currentImageIndex + 1}/${lodgingData.pictures.length}`}
+                        </div>
+                    </>
                 )}
 
                 {lodgingData && lodgingData.pictures.length > 1 && (
@@ -46,8 +51,11 @@ const Carousel = () => {
                     </div>
                 )}
             </div>
-        </div>
+        </div >
     );
 };
 
 export default Carousel;
+
+
+

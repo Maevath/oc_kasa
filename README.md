@@ -1,4 +1,4 @@
-## <img src="./logo.png" alt="Logo" width="100">
+## <img src="./img/logo.png" alt="Logo" width="100">
 
 ### Missions
 
@@ -32,6 +32,6 @@ Développer l'application de Kasa en utilisant la bibliothèque React et en expl
 <br><br>
 
 <p align="center">
-  <img src="./Design sans titre.gif" width="600" alt="Description de l'image" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./img/Design sans titre.gif" width="600" alt="Description de l'image" />
   <h4 align="center">Application Kasa</h4>
 </p>
