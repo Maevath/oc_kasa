@@ -41,13 +41,14 @@
 ///////////////////// DROPDOWNS
 .arrow {
     width: 1.6rem;
-    transform: rotate(270deg);
+    transform: rotate(90deg);
     transition: transform 1s ease;
+    margin: 0 0.5rem 0 0;
 }
 
 .flipped {
-    transform: rotateY(180deg) rotate(90deg);
-    // margin: 0 6px 0 0;
+    transform: rotateY(180deg) rotate(270deg);
+    margin: 0 0.5 0 0;
 }
 
 
