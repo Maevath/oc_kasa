@@ -32,13 +32,12 @@ const Lodging = () => {
             .catch((error) => console.error("Erreur lors de la requête de dataLodging :", error));
     }, [id]);
 
-    if (!lodgingData) {
-        return (
-            <Error />
-        )
+    const lodgingInfo = dataLodging.find(item => item.id === id);
+
+    if (!lodgingInfo) {
+        return <Error />;
     }
 
-    const lodgingInfo = dataLodging.find(item => item.id === id);
     const dropdownContents = [
         { title: 'Description', content: lodgingInfo.description },
         { title: 'Équipements', content: lodgingInfo.equipments }
